@@ -1,4 +1,6 @@
 // back end logic
+var vegetables = ['tomatoes','garlic','mushrooms','pineapple','olives','arugula','onions','green peppers'];
+var meats = ['sausage','pepperoni','bacon','ham','anchovies'];
 var Pizza = function(size, veggies, meats){
   this.size = size,
   this.veggies = veggies,
@@ -16,9 +18,9 @@ Pizza.prototype.price = function(){
     price += 15;
   } else if(this.size == 'large'){
     price += 20;
-  } else if(this.veggies == vegetable){
+  } if(vegetables.includes(this.veggies)){
     price += 3;
-  } else if(this.meats == meat){
+  } if(meats.includes(this.meats)){
     price += 5;
   }
   return price;
