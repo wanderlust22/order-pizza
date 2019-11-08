@@ -40,6 +40,7 @@ $(document).ready(function(){
   $("#output").text('The price of your pizza is $' + total);
   $("#addPizza").toggle();
   $("#addPizza").click(function(){
+    $("#orderAgain").text("Place Your Second Order");
     $("#toSubmit").submit(function(event){
       event.preventDefault();
       var inputSize = $("#size").val();

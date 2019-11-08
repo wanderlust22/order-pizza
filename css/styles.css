@@ -1,3 +1,19 @@
 #addPizza {
   display: none;
 }
+
+.jumbotron {
+  text-align: center;
+  background-color: #a51c1c;
+  opacity: 60%;
+  color: black;
+}
+
+body {
+  background-color: #c88d53;
+}
+
+p {
+  font-size: 25px;
+  line-height: 150px;
+}
