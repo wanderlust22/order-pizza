@@ -9,6 +9,52 @@
     <title>Pizza Pizza</title>
   </head>
   <body>
-
+    <div class="jumbotron">
+      <h1>Pizza! Pizza!</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form id="toSubmit">
+            <div class="form-group">
+              <label for="size">Select a Size</label>
+              <select class="form-control" id="size">
+                <option>small</option>
+                <option>medium</option>
+                <option>large</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="veggie">Vegetables</label>
+              <select class="form-control" id="veggies">
+                <option>tomatoes</option>
+                <option>garlic</option>
+                <option>mushrooms</option>
+                <option>pineapple</option>
+                <option>olives</option>
+                <option>arugula</option>
+                <option>onions</option>
+                <option>green peppers</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="meat">Vegetables</label>
+              <select class="form-control" id="meat">
+                <option>sausage</option>
+                <option>pepperoni</option>
+                <option>bacon</option>
+                <option>ham</option>
+                <option>anchovies</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-default">Submit Your Order</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h3>Price Calculator:</h3>
+          <p id="output"></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
