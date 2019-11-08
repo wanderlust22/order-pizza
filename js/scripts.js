@@ -37,7 +37,6 @@ Pizza.prototype.addSpecs = function() {
   return history.concat(' for $' + this.price());
 }
 
-
 var total = 0;
 // front end logic
 $(document).ready(function(){
@@ -48,9 +47,9 @@ $(document).ready(function(){
     var inputMeat = $("#meat").val();
     var order = new Pizza(inputSize, inputVeggies, inputMeat);
     total += order.price();
-  $("#output").text('The price of your pizza is $' + total);
+  $("#output").text('The total price of your pizza is $' + total);
+  $("#outputOrders").show();
   $("#outputOrders").append('<li>' + order.addSpecs() + '</li>');
-
   $("#addAnother").text('Add another pizza to your order!');
 });
 });

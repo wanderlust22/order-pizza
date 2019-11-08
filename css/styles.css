@@ -40,3 +40,7 @@ h4 {
   word-spacing: 10px;
 
 }
+
+#outputOrders {
+  display: none;
+}
