@@ -27,7 +27,7 @@ Pizza.prototype.price = function(){
 }
 
 
-
+var total = 0;
 // front end logic
 $(document).ready(function(){
   $("#toSubmit").submit(function(event){
@@ -36,21 +36,8 @@ $(document).ready(function(){
     var inputVeggies = $("#veggies").val();
     var inputMeat = $("#meat").val();
     var order = new Pizza(inputSize, inputVeggies, inputMeat);
-    var total = order.price();
+    total += order.price();
   $("#output").text('The price of your pizza is $' + total);
-  $("#addPizza").toggle();
-  $("#addPizza").click(function(){
-    $("#orderAgain").text("Place Your Second Order");
-    $("#toSubmit").submit(function(event){
-      event.preventDefault();
-      var inputSize = $("#size").val();
-      var inputVeggies = $("#veggies").val();
-      var inputMeat = $("#meat").val();
-      var order = new Pizza(inputSize, inputVeggies, inputMeat);
-      total += order.price();
-      $("#output").text('The price of your order is $' + total);
-
-  });
-});
+  $("#addAnother").text('Add another pizza to your order!');
 });
 });

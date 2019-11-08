@@ -17,3 +17,16 @@ p {
   font-size: 25px;
   line-height: 150px;
 }
+
+.card {
+  background-color: #c88d53;
+  border-width: medium;
+}
+
+.col-md-12 {
+  margin-top: 50px;
+}
+
+img {
+  height: 500px;
+}
