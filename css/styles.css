@@ -30,3 +30,13 @@ p {
 img {
   height: 500px;
 }
+
+.btn {
+  border-color: black;
+  border-width: 4px;
+}
+
+h4 {
+  word-spacing: 10px;
+
+}

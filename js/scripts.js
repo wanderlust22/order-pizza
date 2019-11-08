@@ -26,6 +26,17 @@ Pizza.prototype.price = function(){
   return price;
 }
 
+Pizza.prototype.addSpecs = function() {
+  var history = 'You ordered a ' + this.size + ' pizza ';
+
+   if(vegetables.includes(this.veggies)){
+    history = history.concat('with ' + this.veggies);
+  } if(meats.includes(this.meats)){
+    history = history.concat(' and ' + this.meats);
+  }
+  return history.concat(' for $' + this.price());
+}
+
 
 var total = 0;
 // front end logic
@@ -38,6 +49,8 @@ $(document).ready(function(){
     var order = new Pizza(inputSize, inputVeggies, inputMeat);
     total += order.price();
   $("#output").text('The price of your pizza is $' + total);
+  $("#outputOrders").append('<li>' + order.addSpecs() + '</li>');
+
   $("#addAnother").text('Add another pizza to your order!');
 });
 });
