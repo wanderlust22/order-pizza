@@ -35,10 +35,21 @@ $(document).ready(function(){
     var inputSize = $("#size").val();
     var inputVeggies = $("#veggies").val();
     var inputMeat = $("#meat").val();
-
-  var order = new Pizza(inputSize, inputVeggies, inputMeat);
-  console.log(order);
-  $("#output").text(order.price());
+    var order = new Pizza(inputSize, inputVeggies, inputMeat);
+    var total = order.price();
+  $("#output").text('The price of your pizza is $' + total);
+  $("#addPizza").toggle();
+  $("#addPizza").click(function(){
+    $("#toSubmit").submit(function(event){
+      event.preventDefault();
+      var inputSize = $("#size").val();
+      var inputVeggies = $("#veggies").val();
+      var inputMeat = $("#meat").val();
+      var order = new Pizza(inputSize, inputVeggies, inputMeat);
+      total += order.price();
+      $("#output").text('The price of your order is $' + total);
 
   });
+});
+});
 });
